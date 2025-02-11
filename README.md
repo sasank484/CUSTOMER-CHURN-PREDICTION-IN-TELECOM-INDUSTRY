@@ -1,15 +1,13 @@
-AIT614-001
-Team 1
-Readme file
-Operating system: Windows 11 Home
-Setting up WSL:
+
+🖥️Operating system: Windows 11 Home
+🛠️Setting up WSL:
 1.	Open the command prompt of the windows machine as an administrator to avoid the permission issues.
 2.	Use the command “apt install wsl” to install the windows subsystem for linux (ubuntu).
  ![image](https://github.com/user-attachments/assets/0fcd48da-47f1-454d-832f-37c81d89b073)
 
 3.	Close the command prompt once ubuntu is installed.
 4.	Ubuntu will be visible in the start menu.
-Setting up docker and MongoDB:
+🐳Setting up docker and MongoDB:
 1.	Launch the ubuntu application.
 2.	Shift to the root user using the command “sudo su”
 3.	Use the command “apt install docker.io” to install docker
@@ -31,14 +29,14 @@ Here, “my-mongo-container” is the name of the container, “27017” is the 
 7.	Import the data into MongoDB using the command “docker exec -i my-mongo-container mongoimport --db my_database --collection my_collection --type csv --file /data/telecom_churn.csv --headerline”. In this command, “mongoimport” is the function used to import the data, “my_database” is the database name, “my_collection” is the collection name, since the data in MongoDB is saved as documents in a collection. We have mentioned the the file path as “/data/telecom_churn.csv”.
  ![image](https://github.com/user-attachments/assets/39fab56d-a749-4644-b926-e6ac90a2b840)
 
-Setting up Ngrok:
+🌍Setting up Ngrok:
 1.	To use Ngrok, we need to set up a free account and update credit card  information to gain access(There is no charge up to 1GB transfers). We need to use the command provided in ngrok along with the token to enable Ngrok.
  ![image](https://github.com/user-attachments/assets/be30b336-838d-491f-b654-c3181875e889)
 
 2.	Use the command “ngrok tcp 27017” to get the url that will enable the connection between MongoDB and Databricks. 
  ![image](https://github.com/user-attachments/assets/36b860ed-b8f4-400d-866f-ab1ad7fc7836)
 
-Running the ipynb file:
+📜Running the ipynb file:
 Upload the ipynb file to Databricks.
 Create a cluster and connect it to the ipynb notebook.
 Cell 3: This cell holds the url for MongoDB which is the url provided by Ngrok
