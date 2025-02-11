@@ -1,5 +1,6 @@
 
 🖥️Operating system: Windows 11 Home
+
 🛠️Setting up WSL:
 1.	Open the command prompt of the windows machine as an administrator to avoid the permission issues.
 2.	Use the command “apt install wsl” to install the windows subsystem for linux (ubuntu).
